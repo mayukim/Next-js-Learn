@@ -1,2 +1,2 @@
-# Next-js-Learn
-Next-js Learning
+# Next.js-Learn
+Next.js Learning
