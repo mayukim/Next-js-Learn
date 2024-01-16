@@ -9,7 +9,7 @@ export default async function Edit(props) {
 
     await db
         .collection("post")
-        .updateOne({ _id: props.params.id }, { $set: { title: "바보" } });
+        .updateOne({ _id: props.params.id }, { $set: 요청.body });
 
     return (
         <div className="p-20">
@@ -17,6 +17,11 @@ export default async function Edit(props) {
             <form action="/api/post/new" method="POST">
                 <input name="title" defaultValue={result.title} />
                 <input name="content" defaultValue={result.content} />
+                <input
+                    style={{ display: "none" }}
+                    name="_id"
+                    defaultValue={result._id.toString()}
+                />
                 <button type="submit">전송</button>
             </form>
         </div>
